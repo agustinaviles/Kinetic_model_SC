@@ -1,0 +1,9 @@
+Here are 4 .csv files corresponding to the acetate measurements of each strain studied by Chen et al.: ACS1, cit2, mls1, and reference. The data were extracted using WebPlotDigitizer.
+
+The .csv files are structured into 5 columns:
+
+    1. Measurement time in hours
+    2. Acetate concentration in g/L
+    3. Absolute concentration error in g/L
+    4. Acetate concentration in mMol/L
+    5. Absolute concentration error in mMol/L

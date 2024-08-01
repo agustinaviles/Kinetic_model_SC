@@ -1,0 +1,40 @@
+Here is a .m file for MATLAB R2021a.
+
+This file contains a function that takes "varargin" as an input, which corresponds to modifiable parameters of the kinetic model.
+
+The output consists of 4 .csv files corresponding to the simulation of each of the 4 phenotypes studied by Chen et al. The .csv files contain two columns, one for the simulation time [min] and the other for the simulated acetate concentration [mMol/min].
+
+Below are examples of how to use the "varargin" variable to test different parameters than those in the script in this folder. In the "varargin" argument, you can input the necessary parameters. The elements of "varargin" can be called using the syntax varargin{i}, with i being the position of the element in the "varargin" vector. Additionally, the script must be modified appropriately to receive the new inputs from "varargin".
+
+Example 1:
+
+% function=fun(varargin)
+% p1= varargin{1}
+% p2= varargin{2}
+% ... rest of the code
+
+Example 2: modified code to test other parameters.
+
+% function=fun(varargin)
+% ...
+% p5= varargin{1}
+% p6= varargin{2}
+% p7= varargin{3}
+% ... rest of the code
+
+Since this script was built to be executed on the cluster, here is a syntax in Linux that allows its execution.
+
+1. Construction of a .sh file for script execution. The script on the cluster is called do_sim.sh
+
+ml Matlab
+matlab -nodisplay -nosplash -r "try, Modelo_cluster3na($1, $2), catch, exit, end, exit"
+% Here, the variables $1 and $2 are used in "varargin"
+
+2. Script execution. The script on the cluster is called launcher_sim.sh
+
+% ... lines of code
+sbatch do_sim.sh $x $y 
+% ... lines of code
+
+
+

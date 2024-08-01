@@ -1,0 +1,9 @@
+Here are 3 .m files and 4 .txt files.
+
+1. S_Cerevisae_KM.m: This is a script that declares the parameters of the kinetic model (kinetic constants, initial conditions, etc.) and then solves the system of ODEs. Four pairs of .csv files are generated, one for each strain to be simulated. Each pair consists of a simulation times file and a file containing a matrix with the temporal evolution data of the simulated metabolites for each strain.
+
+2 and 3. Cocnetration_plots.m & Flux_plots.m: Scripts that plot the metabolites and fluxes of the system.
+
+*The execution order should always be S_Cerevisae_KM.m first, followed by Cocnetration_plots.m & Flux_plots.m*
+
+The .txt files are the experimental data for the acetate measurements of each strain under study. These are plotted in the Cocnetration_plots.m & Flux_plots.m scripts.
